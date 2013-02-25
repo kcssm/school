@@ -572,3 +572,35 @@ object {
 .infinity-end.neverending #colophon {
 	display: block;
 }
+
+
+/* Custom CSS */
+div#datetime {
+	width:20%;
+	float:left;
+}
+
+hgroup {
+	float:left;
+	width:60%;
+}
+
+div#search {
+	width:20%;
+	float:left;
+}
+
+nav.main-navigation {
+	width:20%;
+	float:left;
+}
+
+div#main {
+	width:80%;
+	float:right;
+}
+
+footer {
+	clear:both;
+	
+}

@@ -26,17 +26,28 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
-		<hgroup>
+		<div id="datetime">
+			<?php 
+				$blogtime = current_time('mysql'); 
+				list( $today_year, $today_month, $today_day, $hour, $minute, $second ) = split( '([^0-9])', $blogtime );
+				echo $today_year . "/" . $today_month . "/" . $today_day;
+			?>
+		</div>
+		<hgroup>			
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
-
-		<nav role="navigation" class="site-navigation main-navigation">
-			<h1 class="assistive-text"><?php _e( 'Menu', 'school' ); ?></h1>
-			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'school' ); ?>"><?php _e( 'Skip to content', 'school' ); ?></a></div>
-
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- .site-navigation .main-navigation -->
+		<div id="search">
+			<?php get_search_form(); ?>
+		</div>
+		
 	</header><!-- #masthead .site-header -->
+	
+	<nav role="navigation" class="site-navigation main-navigation">
+		<h1 class="assistive-text"><?php _e( 'Menu', 'school' ); ?></h1>
+		<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'school' ); ?>"><?php _e( 'Skip to content', 'school' ); ?></a></div>
+
+		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+	</nav><!-- .site-navigation .main-navigation -->
 
 	<div id="main" class="site-main">

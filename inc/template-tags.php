@@ -4,15 +4,15 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package _s
- * @since _s 1.0
+ * @package school
+ * @since school 1.0
  */
 
 if ( ! function_exists( 'school_content_nav' ) ) :
 /**
  * Display navigation to next/previous pages when applicable
  *
- * @since _s 1.0
+ * @since school 1.0
  */
 function school_content_nav( $nav_id ) {
 	global $wp_query, $post;
@@ -36,21 +36,21 @@ function school_content_nav( $nav_id ) {
 
 	?>
 	<nav role="navigation" id="<?php echo esc_attr( $nav_id ); ?>" class="<?php echo $nav_class; ?>">
-		<h1 class="assistive-text"><?php _e( 'Post navigation', '_s' ); ?></h1>
+		<h1 class="assistive-text"><?php _e( 'Post navigation', 'school' ); ?></h1>
 
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
-		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', '_s' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', '_s' ) . '</span>' ); ?>
+		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'school' ) . '</span> %title' ); ?>
+		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'school' ) . '</span>' ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
 		<?php if ( get_next_posts_link() ) : ?>
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', '_s' ) ); ?></div>
+		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'school' ) ); ?></div>
 		<?php endif; ?>
 
 		<?php if ( get_previous_posts_link() ) : ?>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', '_s' ) ); ?></div>
+		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'school' ) ); ?></div>
 		<?php endif; ?>
 
 	<?php endif; ?>
@@ -66,7 +66,7 @@ if ( ! function_exists( 'school_comment' ) ) :
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  *
- * @since _s 1.0
+ * @since school 1.0
  */
 function school_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
@@ -75,7 +75,7 @@ function school_comment( $comment, $args, $depth ) {
 		case 'trackback' :
 	?>
 	<li class="post pingback">
-		<p><?php _e( 'Pingback:', '_s' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', '_s' ), ' ' ); ?></p>
+		<p><?php _e( 'Pingback:', 'school' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'school' ), ' ' ); ?></p>
 	<?php
 			break;
 		default :
@@ -85,10 +85,10 @@ function school_comment( $comment, $args, $depth ) {
 			<footer>
 				<div class="comment-author vcard">
 					<?php echo get_avatar( $comment, 40 ); ?>
-					<?php printf( __( '%s <span class="says">says:</span>', '_s' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php printf( __( '%s <span class="says">says:</span>', 'school' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 				</div><!-- .comment-author .vcard -->
 				<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em><?php _e( 'Your comment is awaiting moderation.', '_s' ); ?></em>
+					<em><?php _e( 'Your comment is awaiting moderation.', 'school' ); ?></em>
 					<br />
 				<?php endif; ?>
 
@@ -96,9 +96,9 @@ function school_comment( $comment, $args, $depth ) {
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time datetime="<?php comment_time( 'c' ); ?>">
 					<?php
 						/* translators: 1: date, 2: time */
-						printf( __( '%1$s at %2$s', '_s' ), get_comment_date(), get_comment_time() ); ?>
+						printf( __( '%1$s at %2$s', 'school' ), get_comment_date(), get_comment_time() ); ?>
 					</time></a>
-					<?php edit_comment_link( __( '(Edit)', '_s' ), ' ' );
+					<?php edit_comment_link( __( '(Edit)', 'school' ), ' ' );
 					?>
 				</div><!-- .comment-meta .commentmetadata -->
 			</footer>
@@ -120,16 +120,16 @@ if ( ! function_exists( 'school_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  *
- * @since _s 1.0
+ * @since school 1.0
  */
 function school_posted_on() {
-	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', '_s' ),
+	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'school' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( get_the_date() ),
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		esc_attr( sprintf( __( 'View all posts by %s', '_s' ), get_the_author() ) ),
+		esc_attr( sprintf( __( 'View all posts by %s', 'school' ), get_the_author() ) ),
 		get_the_author()
 	);
 }
@@ -138,7 +138,7 @@ endif;
 /**
  * Returns true if a blog has more than 1 category
  *
- * @since _s 1.0
+ * @since school 1.0
  */
 function school_categorized_blog() {
 	if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
@@ -165,7 +165,7 @@ function school_categorized_blog() {
 /**
  * Flush out the transients used in school_categorized_blog
  *
- * @since _s 1.0
+ * @since school 1.0
  */
 function school_category_transient_flusher() {
 	// Like, beat it. Dig?

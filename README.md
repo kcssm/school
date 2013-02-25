@@ -1,7 +1,7 @@
-_s
+school
 ===
 
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Hi. I'm a starter theme called `school`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 
 My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
 
@@ -19,19 +19,19 @@ My ultra-minimal CSS might make me look like theme tartare but that means less s
 Getting Started
 ---------------
 
-If you want to keep it simple, head over to http://underscores.me and generate your `_s` based theme from there. You just input the name of the theme you want to create, click the "Generate" button, and you get your ready-to-awesomize starter theme.
+If you want to keep it simple, head over to http://underscores.me and generate your `school` based theme from there. You just input the name of the theme you want to create, click the "Generate" button, and you get your ready-to-awesomize starter theme.
 
-If you want to set things up manually, download `_s` from github. The first thing you want to do is copy the `_s` directory and change the name to something else — Like, say, `megatherium` — then you'll need to do a three-step find and replace on the name in all the templates.
+If you want to set things up manually, download `school` from github. The first thing you want to do is copy the `school` directory and change the name to something else — Like, say, `megatherium` — then you'll need to do a three-step find and replace on the name in all the templates.
 
-1. Search for `_s` inside single quotations to capture the text domain.
+1. Search for `school` inside single quotations to capture the text domain.
 2. Search for `school_` to capture all the function names
-3. Search for `_s` with a space before it to replace all the occurrences of it in comments. (You'd replace this with the capitalized version of your theme name.)
+3. Search for `school` with a space before it to replace all the occurrences of it in comments. (You'd replace this with the capitalized version of your theme name.)
 
 OR
 
-* Search for: `'_s'` & replace with: `'megatherium'`
+* Search for: `'school'` & replace with: `'megatherium'`
 * Search for: `school_` & replace with: `megatherium_`
-* Search for: <code>&nbsp;_s</code> & replace with: <code>&nbsp;Megatherium</code>
+* Search for: <code>&nbsp;school</code> & replace with: <code>&nbsp;Megatherium</code>
 
 Then, update the stylesheet header in style.css and the links in footer.php with your own information. Next, update or delete this readme.
 

@@ -13,8 +13,8 @@
 	<?php } // if ( ! empty( $header_image ) ) ?>
 
  *
- * @package _s
- * @since _s 1.0
+ * @package school
+ * @since school 1.0
  */
 
 /**
@@ -31,7 +31,7 @@
  * @uses school_admin_header_style()
  * @uses school_admin_header_image()
  *
- * @package _s
+ * @package school
  */
 function school_custom_header_setup() {
 	$args = array(
@@ -71,8 +71,8 @@ add_action( 'after_setup_theme', 'school_custom_header_setup' );
  * @todo Remove this function when WordPress 3.6 is released.
  * @return stdClass All properties represent attributes of the curent header image.
  *
- * @package _s
- * @since _s 1.1
+ * @package school
+ * @since school 1.1
  */
 
 if ( ! function_exists( 'get_custom_header' ) ) {
@@ -92,7 +92,7 @@ if ( ! function_exists( 'school_header_style' ) ) :
  *
  * @see school_custom_header_setup().
  *
- * @since _s 1.0
+ * @since school 1.0
  */
 function school_header_style() {
 
@@ -133,7 +133,7 @@ if ( ! function_exists( 'school_admin_header_style' ) ) :
  *
  * @see school_custom_header_setup().
  *
- * @since _s 1.0
+ * @since school 1.0
  */
 function school_admin_header_style() {
 ?>
@@ -163,7 +163,7 @@ if ( ! function_exists( 'school_admin_header_image' ) ) :
  *
  * @see school_custom_header_setup().
  *
- * @since _s 1.0
+ * @since school 1.0
  */
 function school_admin_header_image() { ?>
 	<div id="headimg">

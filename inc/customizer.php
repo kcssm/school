@@ -1,9 +1,9 @@
 <?php
 /**
- * _s Theme Customizer
+ * school Theme Customizer
  *
- * @package _s
- * @since _s 1.2
+ * @package school
+ * @since school 1.2
  */
 
 /**
@@ -11,7 +11,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  *
- * @since _s 1.2
+ * @since school 1.2
  */
 function school_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
@@ -22,7 +22,7 @@ add_action( 'customize_register', 'school_customize_register' );
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  *
- * @since _s 1.2
+ * @since school 1.2
  */
 function school_customize_preview_js() {
 	wp_enqueue_script( 'school_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20120827', true );

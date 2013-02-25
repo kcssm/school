@@ -2,8 +2,8 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package _s
- * @since _s 1.0
+ * @package school
+ * @since school 1.0
  */
 
 get_header(); ?>

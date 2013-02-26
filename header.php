@@ -42,12 +42,14 @@
 		</div>
 		
 	</header><!-- #masthead .site-header -->
-	
-	<nav role="navigation" class="site-navigation main-navigation">
-		<h1 class="assistive-text"><?php _e( 'Menu', 'school' ); ?></h1>
-		<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'school' ); ?>"><?php _e( 'Skip to content', 'school' ); ?></a></div>
+	<section id="wholenav">
+		<nav role="navigation" class="site-navigation main-navigation">
+			<h1 class="assistive-text"><?php _e( 'Menu', 'school' ); ?></h1>
+			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'school' ); ?>"><?php _e( 'Skip to content', 'school' ); ?></a></div>
 
-		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-	</nav><!-- .site-navigation .main-navigation -->
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		</nav><!-- .site-navigation .main-navigation -->
+		<?php get_sidebar(); ?>
+	</section>
 
 	<div id="main" class="site-main">

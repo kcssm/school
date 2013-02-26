@@ -575,6 +575,15 @@ object {
 
 
 /* Custom CSS */
+body {
+	width:960px;
+	margin:0 auto;
+}
+
+header {
+	clear:both;
+}
+
 div#datetime {
 	width:20%;
 	float:left;
@@ -590,9 +599,10 @@ div#search {
 	float:left;
 }
 
-nav.main-navigation {
+section#wholenav {
 	width:20%;
 	float:left;
+	border:1px solid red;
 }
 
 div#main {

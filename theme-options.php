@@ -161,9 +161,9 @@ $options = array(
         "sanitize" => "html",
         "default" => ""
     ),
-    "slideshow" => array(
+    "school_home_gallery" => array(
         "tab" => "slideshow_tab",
-        "name" => "slideshow",
+        "name" => "school_home_gallery",
         "title" => "Slideshow Images",
         "description" => __( "Select or create a gallery of images to use in the homepage slideshow.", "example" ),
         "section" => "slideshow_section_1",

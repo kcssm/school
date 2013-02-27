@@ -80,6 +80,11 @@ function school_setup() {
 	 * Enable support for Post Formats
 	 */
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+	
+	/*
+	* Add Image size
+	*/
+	add_image_size( '760x300', 760, 300, true );
 }
 endif; // school_setup
 add_action( 'after_setup_theme', 'school_setup' );
@@ -139,6 +144,8 @@ function school_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
+	wp_enqueue_script( 'cycle', get_template_directory_uri() . '/js/jquery.cycle.all.js', array( 'jquery' ), '20120227', true );
+	wp_enqueue_script( 'core', get_template_directory_uri() . '/js/core.js', array( 'cycle' ), '20120227', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

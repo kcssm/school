@@ -23,26 +23,19 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div class="wrapper">
+<div class="mainLeft">&nbsp;</div>
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
-	<header id="masthead" class="site-header" role="banner">
-		<div id="datetime">
+	<!-- #masthead .site-header -->
+	<section id="wholenav">
+    <div id="datetime">
 			<?php 
 				$blogtime = current_time('mysql'); 
 				list( $today_year, $today_month, $today_day, $hour, $minute, $second ) = split( '([^0-9])', $blogtime );
-				echo $today_year . "/" . $today_month . "/" . $today_day;
+				echo "<span>Today :</span>".$today_year . "/" . $today_month . "/" . $today_day;
 			?>
 		</div>
-		<hgroup>			
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</hgroup>
-		<div id="search">
-			<?php get_search_form(); ?>
-		</div>
-		
-	</header><!-- #masthead .site-header -->
-	<section id="wholenav">
 		<nav role="navigation" class="site-navigation main-navigation">
 			<h1 class="assistive-text"><?php _e( 'Menu', 'school' ); ?></h1>
 			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'school' ); ?>"><?php _e( 'Skip to content', 'school' ); ?></a></div>
@@ -53,3 +46,14 @@
 	</section>
 
 	<div id="main" class="site-main">
+<header id="masthead" class="site-header" role="banner">
+		
+		<hgroup>			
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+		</hgroup>
+		<div id="search">
+			<?php get_search_form(); ?>
+		</div>
+		
+	</header>

@@ -26,17 +26,27 @@ get_header(); ?>
 						
 							foreach ( $slides as $image ) {			
 								$title = get_post_field( 'post_title', $image );												
-								$img = wp_get_attachment_url( $image, '760x300' );
+								$img = wp_get_attachment_image( $image, '700x300' );
 								
 								echo '<li>';							
-									echo '<img src="'.$img.'" alt="'.$title.'" />';      
+									echo $img;      
 								echo '</li>';
 							}	
 						} 	
 						echo '</ul>';	
 					echo '</div>';
 				?>
-		
+				
+				<?php if ( ! dynamic_sidebar( 'homepage-1' ) ) {
+				
+				echo "<p><h2>ABOUT JSB SCHOOL</h2>
+Open daily from 9.00am to 10.00 pm April to August. 10.00am to 6.00pm September to March. From September to November. Open daily from 9.00am to 10.00 pm April to August. 10.00am to 6.00pm September to March. From September to November. Open daily from 9.00am to 10.00 pm April to August. 10.00am to 6.00pm September to March. From September to November. Open
+
+Open daily from 9.00am to 10.00 pm April to August. 10.00am to 6.00pm September to March. From September to November. Open daily from 9.00am to 10.00 pm April to August. 10.00am to 6.00pm September to March. From September to November. Open daily from 9.00am to 10.00 pm April to August. 10.00am to 6.00pm September to March. From September to November. Open</p>";
+				
+				}
+				?>
+				
 			</div><!-- #content .site-content -->
 		</div><!-- #primary .content-area -->
 

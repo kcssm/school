@@ -173,3 +173,48 @@ function school_category_transient_flusher() {
 }
 add_action( 'edit_category', 'school_category_transient_flusher' );
 add_action( 'save_post', 'school_category_transient_flusher' );
+
+
+
+
+
+/**
+ * Count the number of footer widgets to enable dynamic classes for the footer
+ *
+ * @since albedo 1.0
+ */
+function albedo_footer_widget_class() {
+    $count = 0;
+
+    if ( is_active_sidebar( 'footer-widget-1' ) )
+        $count++;
+
+    if ( is_active_sidebar( 'footer-widget-2' ) )
+        $count++;
+
+    if ( is_active_sidebar( 'footer-widget-3' ) )
+        $count++;
+
+	if ( is_active_sidebar( 'footer-widget-4' ) )
+        $count++;
+
+    $class = '';
+
+    switch ( $count ) {
+        case '1':
+            $class = 'one';
+            break;
+        case '2':
+            $class = 'two';
+            break;
+        case '3':
+            $class = 'three';
+            break;
+		case '4':
+            $class = 'four';
+            break;
+    }
+
+    if ( $class )
+        echo 'class="' . $class . '"';
+}

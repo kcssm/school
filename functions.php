@@ -84,7 +84,7 @@ function school_setup() {
 	/*
 	* Add Image size
 	*/
-	add_image_size( '760x300', 760, 300, true );
+	add_image_size( '700x300', 700, 300, true );
 }
 endif; // school_setup
 add_action( 'after_setup_theme', 'school_setup' );
@@ -136,6 +136,44 @@ function school_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'school_widgets_init' );
+
+/**
+ * Register Homepage widgetized area
+ *
+ * @since school 1.0
+ */
+function school_homepage_widgets_init() {
+	register_sidebar( array(
+		'name' => __( 'Homepage', 'school' ),
+		'id' => 'homepage-1',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h1 class="widget-title">',
+		'after_title' => '</h1>',
+	) );
+}
+add_action( 'widgets_init', 'school_homepage_widgets_init' );
+
+/**
+ * Register Homepage widgetized area
+ *
+ * @since school 1.0
+ */
+function school_footer_widgets_init() {
+$widgets = array( '1', '2', '3', '4' );
+	foreach ( $widgets as $i ) {
+		register_sidebar(array(
+			'name' => __( 'Footer Widget ', 'albedo' ) .$i,
+			'id' => 'footer-widget-'.$i,
+			'before_widget' => '<div class="widget">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title"><span>',
+			'after_title' => '</span></h3>'
+		) );
+	} // end foreach
+}
+add_action( 'widgets_init', 'school_footer_widgets_init' );
+
 
 /**
  * Enqueue scripts and styles

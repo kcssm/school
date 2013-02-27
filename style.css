@@ -596,6 +596,10 @@ header {
 	clear:both;
 }
 
+#primary {
+	clear:both;
+}
+
 div#datetime {
 
 
@@ -639,4 +643,34 @@ div#main {
 footer {
 	clear:both;
 	
+}
+
+/* =Footer
+----------------------------------------------- */
+
+#colophon {
+	padding: 2em 0 1em 0;
+}
+.one aside {
+	width: 100%;
+	float: left;
+}
+.two aside {
+	width: 50%;
+	float: left;
+}
+.three aside {
+	width: 30%;
+	float: left;
+	margin-right: 3.33%;
+}
+.four aside { 
+	width: 22%; 
+	float:left; 
+	margin-right: 4%; 
+} 
+
+#footer-widgets {
+	float: left;
+	width:100%;
 }

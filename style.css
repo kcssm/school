@@ -595,10 +595,12 @@ body {
 header {
 	clear:both;
 }
-
+.slideshow{background:url(../../../wp-includes/images/banner_bg.png) no-repeat; padding:18px 0 15px 23px;}
+.slideshow ul{margin:0; padding:0;}
 #primary {
 	clear:both;
 }
+
 
 div#datetime {
 
@@ -635,8 +637,8 @@ section#wholenav {
 }
 
 div#main {
-	width:75.2%;
-	float:left;
+	width:74.2%;
+	float:left; padding-left:10px;
 
 }
 

@@ -39,7 +39,7 @@ get_header(); ?>
 				
 				<?php if ( ! dynamic_sidebar( 'homepage-1' ) ) {
 				
-				echo "<p><h2>ABOUT JSB SCHOOL</h2>
+				echo "<h2>ABOUT JSB SCHOOL</h2><p>
 Open daily from 9.00am to 10.00 pm April to August. 10.00am to 6.00pm September to March. From September to November. Open daily from 9.00am to 10.00 pm April to August. 10.00am to 6.00pm September to March. From September to November. Open daily from 9.00am to 10.00 pm April to August. 10.00am to 6.00pm September to March. From September to November. Open
 
 Open daily from 9.00am to 10.00 pm April to August. 10.00am to 6.00pm September to March. From September to November. Open daily from 9.00am to 10.00 pm April to August. 10.00am to 6.00pm September to March. From September to November. Open daily from 9.00am to 10.00 pm April to August. 10.00am to 6.00pm September to March. From September to November. Open</p>";

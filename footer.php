@@ -11,8 +11,11 @@
     <!-- BeginFooter -->
 	</div><!-- #main -->
 	</div><!-- #page .hfeed .site -->
+    <div class="clr"></div>
+    </div> <!-- end wrapper -->
 
 	<div id="footer-wrap">
+    <div class="footer-mid">
 
 	<footer id="colophon" class="site-footer container" role="contentinfo">
         <?php if ( is_active_sidebar( 'footer-widget-1' ) || is_active_sidebar( 'footer-widget-2' ) || is_active_sidebar( 'footer-widget-3' ) || is_active_sidebar( 'footer-widget-4' ) ) : ?>
@@ -47,7 +50,11 @@
 			<?php printf( __( 'Theme: %1$s by %2$s.', 'albedo' ), '<a href="http://graphpaperpress.com/themes/albedo/" title="Albedo WordPress Theme">School</a>', '<a href="http://wpslick.com/" rel="designer">WPslick</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- .site-footer .site-footer -->
+    
+    </div> <!-- end footert-mid -->
 	</div><!-- #footer-wrap -->
+    
+    
     <!-- EndFooter -->
 
 <?php wp_footer(); ?>

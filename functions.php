@@ -84,7 +84,7 @@ function school_setup() {
 	/*
 	* Add Image size
 	*/
-	add_image_size( '700x300', 705, 278, true );
+	add_image_size( '700x300', 700, 278, true );
 }
 endif; // school_setup
 add_action( 'after_setup_theme', 'school_setup' );

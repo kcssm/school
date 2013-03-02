@@ -13,6 +13,11 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <title><?php wp_title( '|', true, 'right' ); ?></title>
+
+<?php global $theme_options; ?>
+<?php if ( isset( $theme_options['favicon'] ) && '' != $theme_options['favicon'] ) : ?>
+	<link rel="shortcut icon" href="<?php echo esc_url( $theme_options['favicon'] ); ?>" />
+<?php endif; ?>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
@@ -24,7 +29,6 @@
 
 <body <?php body_class(); ?>>
 <div class="wrapper">
-<div class="mainLeft">&nbsp;</div>
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<!-- #masthead .site-header -->
@@ -49,7 +53,16 @@
 <header id="masthead" class="site-header" role="banner">
 		
 		<hgroup>			
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="site-title">				
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+					<?php if( isset( $theme_options['logo'] ) && '' != $theme_options[ 'logo' ] ) : ?>
+						<img class="sitetitle" src="<?php echo esc_url( $theme_options[ 'logo' ] ); ?>" alt="<?php bloginfo( 'name' ); ?>" id="logo-image-home" />
+					<?php else : ?>
+							<?php bloginfo( 'name' ); ?>
+					<?php endif; ?>
+				</a>
+			
+			</h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
 		<div id="search">

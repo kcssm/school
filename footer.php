@@ -11,7 +11,6 @@
     <!-- BeginFooter -->
 	</div><!-- #main -->
 	</div><!-- #page .hfeed .site -->
-    <div class="clr"></div>
     </div> <!-- end wrapper -->
 
 	<div id="footer-wrap">

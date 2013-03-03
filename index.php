@@ -54,7 +54,8 @@ Open daily from 9.00am to 10.00 pm April to August. 10.00am to 6.00pm September 
 					$slider_cat_ID = "";
 					//$slider_cat = get_cat_name($slider_cat_ID);
 					?>
-						 <div class="nav"><a id="prev2" href="#">Prev</a> <a id="next2" href="#">Next</a></div>
+						 <div class="lnav"> <a id="next2" href="#">Next</a></div>
+                         <div class="rnav"><a id="prev2" href="#">Prev</a> </div>
 
 						<?php $slider_posts_query = new WP_Query("cat=$slider_cat_ID");
 							$total_post = $slider_posts_query->found_posts;

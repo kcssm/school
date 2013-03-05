@@ -12,6 +12,7 @@
 	</div><!-- #main -->
 	</div><!-- #page .hfeed .site -->
     </div>
+	
     </div> <!-- end wrapper -->
 
 	<div id="footer-wrap">

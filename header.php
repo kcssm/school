@@ -32,7 +32,7 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<!-- #masthead .site-header -->
-	<section id="wholenav">
+	<section id="wholenav" >
     <div id="datetime">
 			<?php 
 				$blogtime = current_time('mysql'); 

@@ -68,6 +68,27 @@ function school_setup() {
 	 * Enable support for Post Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
+	
+	
+	/**
+	* Set image sizes
+	*/
+
+	/* Set & create additional image sizes */
+	set_post_thumbnail_size( 205, 130, true ); // default square thumbnail
+	add_image_size( 'sliderthumb', 157, 150, true ); // default square thumbnail
+	add_image_size( 'homeslider', 700, 278, true );
+	/* Update thumbnail and image sizes */
+	update_option( 'thumbnail_size_w', 205, true );
+	update_option( 'thumbnail_size_h', 130, true );
+	update_option( 'medium_size_w', 620, true );
+	update_option( 'medium_size_h', '', true );
+	update_option( 'large_size_w', 940, true );
+	update_option( 'large_size_h', '', true );
+	update_option( 'embed_size_w', 620, true );
+	
+	
+	
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
@@ -81,10 +102,7 @@ function school_setup() {
 	 */
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', 'gallery' ) );
 	
-	/*
-	* Add Image size
-	*/
-	add_image_size( '700x300', 700, 278, true );
+	
 }
 endif; // school_setup
 add_action( 'after_setup_theme', 'school_setup' );

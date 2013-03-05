@@ -712,45 +712,24 @@ footer {
 .footer-mid{width:1000px; margin:auto;}
 
 
-.slide{
-	width:21.5%;
-	float:left; 
-	margin-right:14px;
-	padding:2px;
-	background:#fff;
+/*****carousel******/
+
+
+#carousel_container {
+	background:#7F9C27;
+	border:2px solid #638400;
+	position:relative;
+	overflow:hidden;
+	padding:20px 0px;
+	margin-bottom:20px;
 }
-.app{width:auto; background:#7F9C27; border:2px solid #638400; position:relative; padding:20px 40px;}
-
-
-.lnav span{background:url(images/left_arrow.png) no-repeat; width:11px;
-	height:21px; text-indent:-99999px!important; display:block;	opacity:0.7;
-	cursor:pointer; position:absolute; top:50%; left:5px;
-
-}
-.rnav span{background:url(images/right_arrow.png) no-repeat; width:11px;
-	height:21px; text-indent:-99999px!important; display:block;	opacity:0.7;
-	cursor:pointer; position:absolute; left:98%; top:50%; z-index:999;}
-.rnav span:hover, .lnav span:hover{opacity:1}
-.slide-details h2 a{text-decoration:none;}
-.entry-title a{color:#585858; background:url(images/entry_title_bg.png) no-repeat 3px 7px; padding:0 0 0 12px;}
-.description h2 a{background:#CCC; color:#000; padding:2px 8px; float:right;}
-.description h2 a:hover{background:#999}
-
-
-
-
-
-
-
-
-/***********/
 
 #carousel_inner {
-float:left; /* important for inline positioning */
+/*float:left;  important for inline positioning */
 width:710px; /* important (this width = width of list item(including margin) * items shown */ 
 overflow: hidden;  /* important (hide the items outside the div) */
 /* non-important styling bellow */
-background: #F0F0F0;
+margin:0 auto;
 }
 
 #carousel_ul {
@@ -769,8 +748,8 @@ float: left; /* important for inline positioning of the list items */
 width:165px;  /* fixed width, important */
 /* just styling bellow*/
 padding:0px;
-height:215px;
-background: #000000;
+height:190px;
+background: #fff;
 margin-top:10px;
 margin-bottom:10px; 
 margin-left:5px; 
@@ -783,13 +762,32 @@ margin-right:5px;
 cursor:pointer;
 cursor: hand; 
 border:0px; 
+ margin: 4px;
 }
 #left_scroll, #right_scroll{
 float:left; 
-height:130px; 
-width:15px; 
-background: #C0C0C0; 
+width:14px; 
+
 }
+
+#left_scroll a {
+	background: url("images/left_arrow.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    display: block;
+    height: 21px;
+    left: 5px;
+    opacity: 0.7;
+    position: absolute;
+    text-indent: -99999px !important;
+    top: 49%;
+    width: 14px;
+}
+#right_scroll a{
+	background:url(images/right_arrow.png) no-repeat; width:11px;
+	height:21px; text-indent:-99999px!important; display:block;	opacity:0.7;
+	cursor:pointer; position:absolute; left:98%; top:49%; z-index:999;
+}
+
 #left_scroll img, #right_scroll img{
 border:0; /* remove the default border of linked image */
 /*styling*/

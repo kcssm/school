@@ -47,8 +47,8 @@ Open daily from 9.00am to 10.00 pm April to August. 10.00am to 6.00pm September 
 				}
 				?>
 				
-				<div class="app">
-					<?php
+				<!--<div class="app">
+					<?php /* 
 					//$gpp = get_option('gpp_options');
 					//$slider_cat_ID = $gpp['gpp_slider_posts_cat'];
 					$slider_cat_ID = "";
@@ -83,8 +83,35 @@ Open daily from 9.00am to 10.00 pm April to August. 10.00am to 6.00pm September 
 									</div>
 									<?php  } ?>									
 								
-							<?php endwhile; endif; wp_reset_query(); ?>
+							<?php endwhile; endif; wp_reset_query(); */ ?>
 						</div>
+					</div>-->
+					
+					<?php 
+					$catid = "";
+					$wp_query = new WP_Query("cat=$catid");?>
+					<div id='carousel_container'>
+						<div id='left_scroll'><a href='javascript:slide("left");'><img src='left.png' />Left</a></div>
+						<div id='carousel_inner'>
+							<ul id='carousel_ul'>
+							<?php if ($wp_query->have_posts()): while ($wp_query->have_posts()) : $wp_query->the_post(); ?> 
+								<li>
+									<div class="slide-thumbnail">
+										<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s','gpp_i18n'),the_title_attribute('echo=0')); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+										</div>
+										<div class="slide-details">
+											<h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s','gpp_i18n'),the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
+											<div class="description">
+												<h2 class="left"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s','gpp_i18n'),the_title_attribute('echo=0')); ?>" class="button"><?php _e('more..','gpp_i18n'); ?></a></h2>
+											</div>
+										</div>
+								
+								</li>
+								<?php endwhile; endif; wp_reset_query(); ?>
+							</ul>
+						</div>
+						<div id='right_scroll'><a href='javascript:slide("right");'><img src='right.png' />Right</a></div>
+						<input type='hidden' id='hidden_auto_slide_seconds' value=0 />
 					</div>
 				
 				

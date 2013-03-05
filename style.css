@@ -699,8 +699,28 @@ footer {
 .footer-mid{width:1000px; margin:auto;}
 
 
-.slide {
-	width:25%;
+.slide{
+	width:21.5%;
 	float:left; 
+	margin-right:14px;
+	padding:2px;
+	background:#fff;
 }
-.test{background:#9FC;}
+.app{width:auto; background:#7F9C27; border:2px solid #638400; position:relative; padding:20px 40px;}
+
+
+.lnav span{background:url(images/left_arrow.png) no-repeat; width:11px;
+	height:21px; text-indent:-99999px!important; display:block;	opacity:0.7;
+	cursor:pointer; position:absolute; top:50%; left:5px;
+
+}
+.rnav span{background:url(images/right_arrow.png) no-repeat; width:11px;
+	height:21px; text-indent:-99999px!important; display:block;	opacity:0.7;
+	cursor:pointer; position:absolute; left:98%; top:50%; z-index:999;}
+.rnav span:hover, .lnav span:hover{opacity:1}
+.slide-details h2 a{text-decoration:none;}
+.entry-title a{color:#585858; background:url(images/entry_title_bg.png) no-repeat 3px 7px; padding:0 0 0 12px;}
+.description h2 a{background:#CCC; color:#000; padding:2px 8px; float:right;}
+.description h2 a:hover{background:#999}
+
+

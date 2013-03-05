@@ -54,8 +54,8 @@ Open daily from 9.00am to 10.00 pm April to August. 10.00am to 6.00pm September 
 					$slider_cat_ID = "";
 					//$slider_cat = get_cat_name($slider_cat_ID);
 					?>
-						 <div class="lnav"> <a id="next2" href="#">Next</a></div>
-                         <div class="rnav"><a id="prev2" href="#">Prev</a> </div>
+						 <div class="lnav"><span id="next2">Next</span></div>
+                         <div class="rnav"><span id="prev2">Prev</span></div>
 
 						<?php $slider_posts_query = new WP_Query("cat=$slider_cat_ID");
 							$total_post = $slider_posts_query->found_posts;
@@ -75,7 +75,7 @@ Open daily from 9.00am to 10.00 pm April to August. 10.00am to 6.00pm September 
 										<div class="slide-details">
 											<h2 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s','gpp_i18n'),the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
 											<div class="description">
-												<h2 class="left"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s','gpp_i18n'),the_title_attribute('echo=0')); ?>" class="button"><?php _e('Continue Reading','gpp_i18n'); ?></a></h2>
+												<h2 class="left"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s','gpp_i18n'),the_title_attribute('echo=0')); ?>" class="button"><?php _e('more..','gpp_i18n'); ?></a></h2>
 											</div>
 										</div>
 									</div>

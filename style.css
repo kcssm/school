@@ -383,6 +383,9 @@ background:url(images/menu_check.png) no-repeat 2px 9px;
 		top: 1.5em;
 		left: 0;
 	z-index: 99999;
+	left:100%;
+top:-3%;
+background:#638400;
 }
 .main-navigation ul ul ul {
 	left: 100%;
@@ -744,7 +747,7 @@ footer {
 
 #carousel_inner {
 float:left; /* important for inline positioning */
-width:630px; /* important (this width = width of list item(including margin) * items shown */ 
+width:710px; /* important (this width = width of list item(including margin) * items shown */ 
 overflow: hidden;  /* important (hide the items outside the div) */
 /* non-important styling bellow */
 background: #F0F0F0;
@@ -752,7 +755,7 @@ background: #F0F0F0;
 
 #carousel_ul {
 position:relative;
-left:-210px; /* important (this should be negative number of list items width(including margin) */
+left:-170px; /* important (this should be negative number of list items width(including margin) */
 list-style-type: none; /* removing the default styling for unordered list items */
 margin: 0px;
 padding: 0px;
@@ -763,10 +766,10 @@ padding-bottom:10px;
 
 #carousel_ul li{
 float: left; /* important for inline positioning of the list items */                                    
-width:200px;  /* fixed width, important */
+width:165px;  /* fixed width, important */
 /* just styling bellow*/
 padding:0px;
-height:110px;
+height:215px;
 background: #000000;
 margin-top:10px;
 margin-bottom:10px; 

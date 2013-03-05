@@ -17,8 +17,8 @@ jQuery( document ).ready( function( $ ) {
 	
 	
 	  //options( 1 - ON , 0 - OFF)
-        var auto_slide = 1;
-            var hover_pause = 1;
+        var auto_slide = 0;
+            var hover_pause = 0;
         var key_slide = 1;
         
         //speed of auto slide(
@@ -108,7 +108,7 @@ function slide(where){
                 }
                 
                 //...and then just get back the default left indent
-                jQuery('#carousel_ul').css({'left' : '-210px'});
+                jQuery('#carousel_ul').css({'left' : '-170px'});
             });
             
             

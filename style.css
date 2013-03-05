@@ -701,5 +701,6 @@ footer {
 
 .slide {
 	width:25%;
-	float:left;
+	float:left; 
 }
+.test{background:#9FC;}

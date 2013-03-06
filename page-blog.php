@@ -26,7 +26,7 @@ get_header(); ?>
 					<header class="entry-header">
 						<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'auditorium' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 					</header>
-					<?php the_content(); ?>
+					<?php the_excerpt(); ?>
 					<footer class="entry-meta">
 						<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 							<?php

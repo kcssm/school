@@ -12,6 +12,7 @@
 	</div><!-- #main -->
 	</div><!-- #page .hfeed .site -->
     </div>
+	
     </div> <!-- end wrapper -->
 
 	<div id="footer-wrap">
@@ -44,10 +45,10 @@
         <?php endif; // end check if any footer widgets are active ?>
 
 		<div class="site-info">
-			<?php do_action( 'albedo_credits' ); ?>
+			<?php do_action( 'school_credits' ); ?>
 			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'albedo' ); ?>" rel="generator"><?php printf( __( 'Powered by %s', 'albedo' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'albedo' ), '<a href="http://graphpaperpress.com/themes/albedo/" title="Albedo WordPress Theme">School</a>', '<a href="http://wpslick.com/" rel="designer">WPslick</a>' ); ?>
+			<?php printf( __( 'Theme: %1$s by %2$s.', 'saga' ), '<a href="http://www.wpsaga.com/themes/school/" title="School WordPress Theme">School</a>', '<a href="http://wpsaga.com/" rel="designer">wpsaga</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- .site-footer .site-footer -->
     

@@ -822,3 +822,25 @@ cursor: hand;
     position: relative;
     left: 75%   
 }
+
+#content h1.widget-title{
+    font-size:24px;
+    display:inline-block;
+    position:relative;
+    margin:20px;
+}
+#content h1.widget-title:after{
+    content:'';
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:-10px;
+    right:-10px;
+    background:green;
+    z-index:-1;
+    -moz-transform: skew(-25deg);
+   -webkit-transform: skew(-25deg);
+    box-shadow:3px 3px 0 0 #000;
+    -moz-box-shadow:3px 3px 0 0 #000;
+    -webkit-box-shadow:3px 3px 0 0 #000;
+}

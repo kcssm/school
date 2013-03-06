@@ -14,6 +14,15 @@
 if ( ! isset( $content_width ) )
 	$content_width = 640; /* pixels */
 
+/**
+ * Set the theme option variable for use throughout theme.
+ *
+ * @since school 1.0
+ */
+if ( ! isset( $theme_options ) )
+	$theme_options = get_option( 'school_options' );
+global $theme_options;	
+	
 /*
  * Load Jetpack compatibility file.
  */

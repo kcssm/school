@@ -798,7 +798,7 @@ cursor: hand;
 
 
 
-#page{
+/*#page{
 	float:left;
 	margin-left: -100%;
     padding-left: 100%;
@@ -822,15 +822,15 @@ cursor: hand;
     position: relative;
     left: 75%   
 }
-
-#content h1.widget-title{
+*/
+#content h1.widget-title, #content h2.widget-title{
     font-size:24px;
     display:inline-block;
     position:relative;
     margin:10px 0 0 20px;
 	color:#fff;
 }
-#content h1.widget-title:after{
+#content h1.widget-title:after, #content h2.widget-title:after{
     content:'';
     position:absolute;
     top:0;

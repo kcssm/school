@@ -24,6 +24,7 @@ get_header(); ?>
 				<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 					<?php $do_not_duplicate = $post->ID; ?>
 					<header class="entry-header">
+                    <span><?php echo get_the_time(__('M d, Y', 'school')) . ' by ' . get_the_author_link(); ?></span>
 						<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'auditorium' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 					</header>
 					<?php the_content(); ?>
@@ -35,8 +36,8 @@ get_header(); ?>
 								if ( $categories_list ) :
 							?>
 							<span class="cat-links">
-								<?php __( 'Posted on ', 'auditorium' ); ?>
-								<?php printf( __( ' in %1$s', 'auditorium' ), $categories_list ); ?>
+								<?php printf(__( 'Posted in ', 'auditorium' )); ?>
+								<?php printf( __( '%1$s', 'auditorium' ), $categories_list ); ?>
 							</span>
 							<?php endif; // End if categories ?>
 

@@ -54,7 +54,7 @@ Open daily from 9.00am to 10.00 pm April to August. 10.00am to 6.00pm September 
 					$category = get_the_category($catid); 
 					
 					?>
-					<h2 id="slider_title"><?php echo $category[0]->cat_name; ?></h2>
+					<h2 class="widget-title"><?php echo $category[0]->cat_name; ?></h2>
 					<div id='carousel_container'>
 						<div id='left_scroll'><a href='javascript:slide("left");'><img src='left.png' />Left</a></div>
 						<div id='carousel_inner'>

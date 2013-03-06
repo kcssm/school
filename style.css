@@ -827,20 +827,20 @@ cursor: hand;
     font-size:24px;
     display:inline-block;
     position:relative;
-    margin:20px;
+    margin:10px 0 0 20px;
+	color:#fff;
 }
 #content h1.widget-title:after{
     content:'';
     position:absolute;
     top:0;
     bottom:0;
-    left:-10px;
+    left:-11px;
     right:-10px;
-    background:green;
+    background:#638400;
     z-index:-1;
     -moz-transform: skew(-25deg);
    -webkit-transform: skew(-25deg);
-    box-shadow:3px 3px 0 0 #000;
-    -moz-box-shadow:3px 3px 0 0 #000;
-    -webkit-box-shadow:3px 3px 0 0 #000;
+  
 }
+#content aside .textwidget{border-top:2px solid #638400;}
